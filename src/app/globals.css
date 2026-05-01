@@ -1,27 +1,24 @@
 @import "tailwindcss";
 
 :root {
-  --blanco: #FFEFE0;
+  --claro: #FFEFE0;
+  --blanco: #FDFFFE;
   --negro: #080808;
-}
-
-@layer base {
-  body {
-    background: #FFEFE0;
-    color: #080808;
-    font-family: var(--font-sans);
-  }
+  --color-acento: #E94228;
+  --color-medio: #FEAA4E;
+  --color-acento2: #D2D835;
+  --color-oscuro: #225629;
 }
 
 @media (prefers-color-scheme: light) {
   body {
-    background: var(--blanco);
+    background: var(--claro);
     color: var(--negro);
   }
 }
 
 body {
-  background: var(--blanco);
+  background: var(--claro);
   color: var(--negro);
   font-family: var(--font-sans);
 }

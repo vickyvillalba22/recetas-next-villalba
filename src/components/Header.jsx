@@ -25,7 +25,7 @@ const itemsNav = [
 // faltan href de items
 
 return(
-    <header className="flex justify-between h-[10vh] content-center flex-wrap w-[95%] items-center border">
+    <header className="flex justify-between h-[10vh] content-center flex-wrap w-[90%] items-center">
 
         <div className="w-1/3 flex gap-2 items-center">
 

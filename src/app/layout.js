@@ -1,6 +1,7 @@
 import { Domine, Albert_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header"
+import Footer from "@/components/Footer";
 
 const domine = Domine({
   variable: "--font-domine",
@@ -23,9 +24,10 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${albertSans.variable} ${domine.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col items-center">
+      <body className="min-h-full flex flex-col items-center justify-between">
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
