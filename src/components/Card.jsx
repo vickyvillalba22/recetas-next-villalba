@@ -1,41 +1,16 @@
 'use client'
 
 import { useState } from "react"
-
-// la gracia del componente de image es que las va cargando a medida que aparecen en el viewport. le podemos poner un placeholder también.
 import Image from "next/image"
+import Link from "next/link" //ruta para ir a las comidas
 
-//ruta para ir a las comidas
-import Link from "next/link"
-
-const Card = ({name, image, id}) => {
-
-    const [likes, setLikes] = useState(0)
-    const [cardColor, setCardColor] = useState('light')
-    const [showName, setShowName] = useState(true)
-
-    const handleLikes = ()=>{
-        setLikes(likes+1)
-    }
-    const handleColor = ()=>{
-        setCardColor(cardColor === 'light' ? 'dark' : 'light') 
-    }
-
-    const handleShowName = ()=>{
-        setShowName(!showName)
-    }
-
+const Card = ({id, name, cuisine, image, tags}) => {
+    
     return (
         
-        <div className={`border ${cardColor === 'dark' ? 'bg-black' : 'bg-white'} gap-1 flex`}>
+        <div>
 
-            {showName && ( <h3>{name}</h3> )}
-
-            <button onClick={handleLikes}> Like {likes} </button>
-
-            <button onClick={handleColor}>Toggle color</button>
-
-            <button onClick={handleShowName}>Toggle name</button>
+            <div className="gap-1 flex flex-col bg-(--blanco) rounded-2xl p-5 drop-shadow-sm">
 
             <Image
             
@@ -43,12 +18,25 @@ const Card = ({name, image, id}) => {
                 width={100}
                 height={200}
                 alt={name}
+                className="rounded-2xl w-full"
 
             />
 
-            <button>
-                <Link href={`/src/app/recipe/${id}`}>Ver receta</Link>
+            <p>{cuisine}</p>
+
+            <h3 className="text-lg font-semibold">{name}</h3>
+
+            <ul className="flex flex-wrap gap-2">
+                {tags.map((tag, index) => (
+                    <span key={index} className="bg-(--color-medio) text-(--blanco) text-xs py-0.5 px-2 rounded-2xl">{tag}</span>
+                ))}
+            </ul>
+
+            <button className="text-sm font-medium py-1 px-5 flex items-center gap-4 w-fit bg-(--color-acento2) text-(--color-oscuro) rounded-2xl self-end">
+                <Link href={`/src/app/recipe/${id}`}>Detalles</Link>
             </button>
+
+            </div>
 
         </div>
         
