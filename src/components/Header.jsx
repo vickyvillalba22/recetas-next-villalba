@@ -21,21 +21,24 @@ const itemsNav = [
     },
 ]
 
-//ver como se hace responsive la img
+// ver como se hace responsive la img
+// faltan href de items
 
 return(
-    <header className="flex w-full justify-between h-[10vh] content-center flex-wrap">
-        <div className="w-1/3 flex gap-8">
+    <header className="flex justify-between h-[10vh] content-center flex-wrap w-[95%] items-center border">
+
+        <div className="w-1/3 flex gap-2 items-center">
 
         <Image
             src={'/imgs/logo.png'}
-            width={50}
-            height={50}
+            width={40}
+            height={40}
             alt="logo"
         />
             
             <p className="font-serif">Mis recetas</p>
         </div>
+
         <nav>
             <ul className="flex gap-8">
                 {itemsNav.map((item, index) => (

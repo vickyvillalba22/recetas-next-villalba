@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${albertSans.variable} ${domine.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full flex flex-col items-center">
         <Header />
         {children}
       </body>
