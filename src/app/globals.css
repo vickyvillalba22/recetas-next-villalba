@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+:root {
+  --blanco: #FFEFE0;
+  --negro: #080808;
+}
+
+@layer base {
+  body {
+    background: #FFEFE0;
+    color: #080808;
+    font-family: var(--font-sans);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    background: var(--blanco);
+    color: var(--negro);
+  }
+}
+
+body {
+  background: var(--blanco);
+  color: var(--negro);
+  font-family: var(--font-sans);
+}
