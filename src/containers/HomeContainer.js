@@ -37,6 +37,7 @@ const HomeContainer = () => {
   useEffect(()=>{
     // eslint-disable-next-line
     handleGetItems()
+    setLoading(!setLoading)
   }, [])
 
   const [loading, setLoading] = useState(true)
@@ -44,6 +45,7 @@ const HomeContainer = () => {
   return (
 
     <div className="w-[90%] flex flex-col content-center">
+        
       <HeroSection />
 
       <section>
