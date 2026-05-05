@@ -3,6 +3,9 @@
 import { useState, useEffect } from "react"
 import axios from "axios"
 import InfoRecipe from "@/components/detail/InfoRecipe"
+import DataRecipe from "@/components/detail/DataRecipe"
+import Ingredientes from "@/components/detail/Ingredientes"
+import Instrucciones from "@/components/detail/Instrucciones"
 
 const RecipeContainer = ({id}) => {
 
@@ -37,6 +40,9 @@ const RecipeContainer = ({id}) => {
 
         <main>
             <InfoRecipe item={item} />
+            <DataRecipe item={item} />
+            <Ingredientes item={item} />
+            <Instrucciones item={item} />
         </main>
     )
 }
