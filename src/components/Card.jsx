@@ -1,6 +1,5 @@
 'use client'
 
-import { useState } from "react"
 import Image from "next/image"
 import Link from "next/link" //ruta para ir a las comidas
 
@@ -33,7 +32,7 @@ const Card = ({id, name, cuisine, image, tags}) => {
             </ul>
 
             <button className="text-sm font-medium py-1 px-5 flex items-center gap-4 w-fit bg-(--color-acento2) text-(--color-oscuro) rounded-2xl self-end">
-                <Link href={`/src/app/recipe/${id}`}>Detalles</Link>
+                <Link href={`/recipe/${id}`}>Detalles</Link>
             </button>
 
             </div>
