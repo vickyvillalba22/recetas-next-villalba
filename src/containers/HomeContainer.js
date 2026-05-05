@@ -7,7 +7,9 @@ import axios from 'axios';
 import { useState, useEffect } from 'react';
 
 import HeroSection from "@/components/HeroSection";
+import Categories from '@/components/Categories';
 import CardsGrid from "@/components/CardsGrid";
+import Cierre from '@/components/Cierre';
 
 const HomeContainer = () => {
 
@@ -48,10 +50,14 @@ const HomeContainer = () => {
         
       <HeroSection />
 
+      <Categories items={items} />
+
       <section>
         {loading && <div>Loading...</div>}          
         {!loading && <CardsGrid items={items} />}
       </section>
+
+      <Cierre />
 
     </div>
 
