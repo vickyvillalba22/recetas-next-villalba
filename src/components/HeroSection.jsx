@@ -1,5 +1,6 @@
 //preguntas: como incorporo iconos
 import Image from "next/image"
+import { Icon } from "@iconify/react"
 
 const HeroSection = ()=>{
     return(
@@ -8,7 +9,12 @@ const HeroSection = ()=>{
             <div className="w-1/2 flex flex-col gap-8 h-fit">
                 <h1 className="font-serif text-4xl">Comer sano es una parte muy importante de tu estilo de vida</h1>
                 <p className="text-2xl">Recetas listas para preparar las comidas más ricas!</p>
-                <button className="bg-red-400 p-2 rounded-2xl w-fit">Ver todas las recetas</button>
+
+                <button className="bg-red-400 p-2 rounded-2xl w-fit">
+                    Ver todas las recetas
+                    <Icon icon="hugeicons:arrow-down-02" />
+                </button>
+
             </div>
 
             <div>

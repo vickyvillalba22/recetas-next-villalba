@@ -1,4 +1,5 @@
 import React from 'react'
+import { Icon } from '@iconify/react'
 
 const DataRecipe = ({item}) => {
 
@@ -25,22 +26,20 @@ const items = [
 
 
   return (
-    <div>
-        
-        DataRecipe
+    <section className='row-span-2 border-2 border-(--color-oscuro) rounded-2xl'>
 
         <ul className='list-none'>
 
             {items.map((item, index)=>(
                 <li key={index}>
-                    <span>{item.icono}</span>
+                    <span><Icon icon={item.icono} /></span>
                     {item.dato}
                 </li>
             ))}
 
         </ul>
 
-    </div>
+    </section>
 
   )
 }

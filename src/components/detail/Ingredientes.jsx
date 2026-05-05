@@ -2,7 +2,7 @@ import React from 'react'
 
 const Ingredientes = ({item}) => {
   return (
-    <section>
+    <section className='row-span-3 col-start-2 row-start-3 border-2 border-(--color-medio) rounded-2xl'>
         
         <h4>Ingredients</h4>
 

@@ -38,7 +38,7 @@ const RecipeContainer = ({id}) => {
 
     return (
 
-        <main>
+        <main className="grid grid-cols-3 grid-rows-5 gap-4 w-[90%] h-[85vh]">
             <InfoRecipe item={item} />
             <DataRecipe item={item} />
             <Ingredientes item={item} />

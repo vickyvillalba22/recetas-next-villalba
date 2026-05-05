@@ -1,9 +1,10 @@
 import React from 'react'
 import Image from "next/image"
+import { Icon } from '@iconify/react'
 
 const InfoRecipe = ({item}) => {
   return (
-    <section>
+    <section className='bg-(--blanco) p-6 row-span-5 rounded-2xl'>
 
                 <h1>{item.name}</h1>
 
@@ -16,6 +17,7 @@ const InfoRecipe = ({item}) => {
                         height={200}
                         alt={item.name}
                         className="rounded-2xl w-full"
+                        loading='eager'
 
                     />
 
@@ -41,11 +43,11 @@ const InfoRecipe = ({item}) => {
 
                 <div className='flex justify-between'>
                     <div className='flex gap-4'>
-                        <span>Icon star</span>
+                        <span><Icon icon="hugeicons:star" /></span>
                         <p>Rating: {item.rating}</p>
                     </div>
                     <div className='flex gap-4'>
-                        <span>Icon message</span>
+                        <span><Icon icon="hugeicons:message-01" /></span>
                         <p>Reviews: {item.reviewCount}</p>
                     </div>
                 </div>
