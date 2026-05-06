@@ -57,7 +57,7 @@ const HomeContainer = () => {
         {!loading && <CardsGrid items={items} />}
       </section>
 
-      <Cierre />
+      <Cierre items={items} />
 
     </div>
 
