@@ -23,7 +23,7 @@
 body {
   background: var(--claro);
   color: var(--negro);
-  font-family: var(--font-serif)
+  font-family: var(--font-sans)
 }
 
 @tailwind utilities;
