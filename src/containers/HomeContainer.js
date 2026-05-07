@@ -46,20 +46,21 @@ const HomeContainer = () => {
 
   return (
 
-    <div className="w-[90%] flex flex-col content-center">
+    <main className="w-[90%] flex flex-col content-center gap-15">
         
       <HeroSection />
 
       <Categories items={items} />
 
-      <section>
+      <section className='flex flex-col gap-8'>
+        <h3 className='text-3xl font-bold'>Todas las recetas</h3>
         {loading && <div>Loading...</div>}          
         {!loading && <CardsGrid items={items} />}
       </section>
 
       <Cierre items={items} />
 
-    </div>
+    </main>
 
   )
 }
