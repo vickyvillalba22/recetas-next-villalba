@@ -15,6 +15,7 @@ const HomeContainer = () => {
 
   // 2. declaramos el estado del array
   const [items, setItems] = useState([])
+  const [filteredItems, setFilteredItems] = useState([])
 
   // 4. armamos la funcion asincrónica para traer la informacion. el tema es buscar bien la clave que vamos a usar de ese json. en este caso es recipes.
   const handleGetItems = async()=>{
@@ -44,18 +45,22 @@ const HomeContainer = () => {
 
   const [loading, setLoading] = useState(true)
 
+  const handleSetFilter = (category) =>{
+    setFilteredItems(items.filter(item=>item.cuisine === category))
+  }
+
   return (
 
     <main className="w-[90%] flex flex-col content-center gap-15">
         
       <HeroSection />
 
-      <Categories items={items} />
+      <Categories items={items} setFilter={handleSetFilter} />
 
       <section className='flex flex-col gap-8'>
         <h3 className='text-3xl font-bold'>Todas las recetas</h3>
         {loading && <div>Loading...</div>}          
-        {!loading && <CardsGrid items={items} />}
+        {!loading && <CardsGrid items={filteredItems} />}
       </section>
 
       <Cierre items={items} />

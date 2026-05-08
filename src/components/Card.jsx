@@ -10,7 +10,7 @@ const Card = ({id, name, cuisine, image, tags}) => {
         
         <div>
 
-            <div className="gap-1 flex flex-col bg-(--blanco) rounded-2xl p-5 drop-shadow-sm">
+            <div className="gap-3 flex flex-col bg-(--blanco) rounded-2xl p-5 drop-shadow-sm">
 
             <Image
             
@@ -33,9 +33,9 @@ const Card = ({id, name, cuisine, image, tags}) => {
             </ul>
 
             <button className="text-sm font-medium py-1 px-5 flex items-center gap-4 w-fit bg-(--color-acento2) text-(--color-oscuro) rounded-2xl self-end">
-                <Link href={`/recipe/${id}`}>
+                <Link href={`/recipe/${id}`} className="flex gap-2">
                     Detalles
-                    <Icon icon="hugeicons:arrow-right-02" />
+                    <Icon icon="hugeicons:arrow-right-02" className="text-[20px]" />
                 </Link>
             </button>
 

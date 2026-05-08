@@ -1,24 +1,17 @@
+'use client'
+
 import React from 'react'
 import Image from 'next/image';
 
-const categories = ({items}) => {
+const Categories = ({items, setFilter}) => {
 
     console.log(items);
 
-    const arrayCategories = []
-
-    items.map((recipe, index)=>{
-        const yaEsta = arrayCategories.some(cat=>cat.name===recipe.cuisine)
-        if(!yaEsta){
-            arrayCategories.push({
-              name: recipe.cuisine,
-              image: recipe.image,
-              color: ""
-            })
-        }
-    })
-
-    console.log(arrayCategories);
+    const categoriasListas = [...new Set(items.map(item => item.cuisine))].map((cuisine, index) => ({
+        name: cuisine,
+        image: items.find(item => item.cuisine === cuisine).image,
+        color: "",
+    }))
 
   return (
 
@@ -30,14 +23,16 @@ const categories = ({items}) => {
         </div>
 
         <div className='flex gap-8'>
-            {arrayCategories.map((recipe, index)=>(
 
-                <div key={index} className='flex flex-col items-center'>
-                    <Image src={recipe.image} width={100} height={100} alt={recipe.name} className='rounded-full' />
-                    <h3 className='border py-10 px-6 rounded-2xl'>{recipe.name}</h3>
-                </div>
+            {categoriasListas.map((cuisine, index)=>(
+
+                <button key={index} className='flex flex-col items-center' onClick={()=> setFilter(cuisine.name)} >
+                    <Image src={cuisine.image} width={100} height={100} alt={cuisine.name} className='rounded-full' />
+                    <h3 className='border py-10 px-6 rounded-2xl'>{cuisine.name}</h3>
+                </button>
 
             ))}
+
         </div>
 
     </section>
@@ -45,4 +40,4 @@ const categories = ({items}) => {
   )
 }
 
-export default categories
+export default Categories
