@@ -11,8 +11,8 @@ const Cierre = ({items}) => {
     <section className='flex h-[90vh] justify-evenly items-center'>
 
       <div className='flex flex-col w-[40%] gap-4'>
-          <h4>¡Gracias por ver!</h4>
-          <p>Esperamos que estas recetas te resulten útiles y puedas cocinarselas a quien quieras! Porque no hay nada mejor que una rica comida.</p>
+          <h4 className='text-3xl font-serif'>¡Gracias por ver!</h4>
+          <p className='text-[20px]'>Esperamos que estas recetas te resulten útiles y puedas cocinarselas a quien quieras! Porque no hay nada mejor que una rica comida.</p>
       </div>
 
       <div className="grid grid-cols-2 grid-rows-5 gap-4 h-[60vh] w-[35%]">

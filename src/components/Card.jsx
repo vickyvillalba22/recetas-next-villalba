@@ -10,7 +10,7 @@ const Card = ({id, name, cuisine, image, tags}) => {
         
         <div>
 
-            <div className="gap-3 flex flex-col bg-(--blanco) rounded-2xl p-5 drop-shadow-sm">
+            <div className="justify-between flex flex-col bg-(--blanco) rounded-2xl p-5 drop-shadow-sm h-[65vh]">
 
             <Image
             
