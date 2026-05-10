@@ -8,10 +8,10 @@ const Cierre = ({items}) => {
   if (!items || items.length < 3) return <p>Cargando...</p>
   
   return (
-    <section className='flex h-[90vh] justify-evenly items-center'>
+    <section id='contact' className='flex h-[90vh] justify-evenly items-center'>
 
       <div className='flex flex-col w-[40%] gap-4'>
-          <h4 className='text-3xl font-serif'>¡Gracias por ver!</h4>
+          <h4 className='text-3xl font-serif font-semibold'>¡Gracias por ver!</h4>
           <p className='text-[20px]'>Esperamos que estas recetas te resulten útiles y puedas cocinarselas a quien quieras! Porque no hay nada mejor que una rica comida.</p>
       </div>
 

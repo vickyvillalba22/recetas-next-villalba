@@ -36,7 +36,7 @@ const Categories = ({items, setFilter}) => {
 
   return (
 
-    <section className='flex flex-col gap-6'>
+    <section id='categories' className='flex flex-col gap-6'>
 
         <div className='flex justify-between'>
             <h2 className='text-3xl font-bold'>Categorías</h2>

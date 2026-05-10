@@ -1,5 +1,6 @@
 import Image from "next/image"
 import { Icon } from "@iconify/react"
+import Link from "next/link"
 
 const HeroSection = ()=>{
     return(
@@ -12,10 +13,10 @@ const HeroSection = ()=>{
 
                 <p className="text-2xl">Recetas listas para preparar las comidas más ricas!</p>
 
-                <button className="bg-(--color-acento) py-2 px-5 rounded-2xl w-fit text-(--blanco) flex items-center gap-2">
+                <Link href="/#recipes" className="bg-(--color-acento) py-2 px-5 rounded-2xl w-fit text-(--blanco) flex items-center gap-2">
                     Ver todas las recetas
                     <Icon icon="hugeicons:arrow-down-02" className="text-[1.4em]" />
-                </button>
+                </Link>
 
             </div>
 

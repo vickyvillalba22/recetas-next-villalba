@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const Navbar = ()=>{
 
@@ -9,15 +10,15 @@ const itemsNav = [
     },
     {
         name: 'Categorías',
-        link: '/categorias',
+        link: '/#categories',
     },
         {
         name: 'Recetas',
-        link: '/recetas',
+        link: '/#recipes',
     },
     {
         name: 'Contacto',
-        link: '/contacto',
+        link: '/#contact',
     },
 ]
 
@@ -25,9 +26,9 @@ const itemsNav = [
 // faltan href de items
 
 return(
-    <header className="flex justify-between h-[10vh] content-center flex-wrap w-[90%] items-center">
+    <header className="flex justify-between h-[10vh] content-center flex-wrap w-[90%] items-center sticky top-0 bg-(--claro) z-4">
 
-        <div className="w-1/3 flex gap-2 items-center">
+        <Link href={itemsNav[0].link} className="w-1/3 flex gap-2 items-center">
 
         <Image
             src={'/imgs/logo.png'}
@@ -37,12 +38,12 @@ return(
         />
             
             <p className="font-serif">Mis recetas</p>
-        </div>
+        </Link>
 
         <nav>
             <ul className="flex gap-8">
                 {itemsNav.map((item, index) => (
-                    <li key={index}>{item.name}</li>
+                    <Link href={item.link} key={index}>{item.name} </Link>
                 ))}
             </ul>
         </nav>
