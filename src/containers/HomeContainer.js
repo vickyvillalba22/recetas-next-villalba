@@ -16,6 +16,7 @@ const HomeContainer = () => {
   // 2. declaramos el estado del array
   const [items, setItems] = useState([])
   const [filteredItems, setFilteredItems] = useState([])
+  const [loading, setLoading] = useState(true)
 
   // 4. armamos la funcion asincrónica para traer la informacion. el tema es buscar bien la clave que vamos a usar de ese json. en este caso es recipes.
   const handleGetItems = async()=>{
@@ -27,6 +28,7 @@ const HomeContainer = () => {
         
         // 5. la guardamos en memoria
         setItems(data)
+        setFilteredItems(data)
 
     } catch (error) {
         console.log("hubo un error en el fetch", error)
@@ -40,12 +42,16 @@ const HomeContainer = () => {
   useEffect(()=>{
     // eslint-disable-next-line
     handleGetItems()
-    setLoading(!setLoading)
+    setLoading(false)
   }, [])
 
-  const [loading, setLoading] = useState(true)
-
   const handleSetFilter = (category) =>{
+
+    if(category === "all"){
+      setFilteredItems(items)
+      return
+    }
+
     setFilteredItems(items.filter(item=>item.cuisine === category))
   }
 
