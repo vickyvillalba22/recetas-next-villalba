@@ -3,8 +3,10 @@ import Image from "next/image"
 import { Icon } from '@iconify/react'
 
 const InfoRecipe = ({item}) => {
+
   return (
-    <section className='bg-(--blanco) p-6 row-span-5 rounded-2xl flex flex-col justify-between'>
+
+    <section className='h-[85vh] bg-(--blanco) p-6 mt-4 rounded-2xl flex flex-col justify-between lg:row-span-5 lg:mt-0'>
 
         <div className="flex flex-col gap-4">
 
