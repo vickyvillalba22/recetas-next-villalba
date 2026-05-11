@@ -4,7 +4,7 @@ const CardsGrid = ({items}) => {
 
   return (
 
-    <section id="recipes" className="grid grid-cols-5 gap-4">
+    <section id="recipes" className="grid grid-cols-2 gap-4 lg:grid-cols-5">
 
         {items.map((item, index)=>(
 

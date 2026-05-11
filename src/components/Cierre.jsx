@@ -8,14 +8,14 @@ const Cierre = ({items}) => {
   if (!items || items.length < 3) return <p>Cargando...</p>
   
   return (
-    <section id='contact' className='flex h-[90vh] justify-evenly items-center'>
+    <section id='contact' className='flex flex-col h-[90vh] justify-evenly items-center lg:flex-row'>
 
-      <div className='flex flex-col w-[40%] gap-4'>
+      <div className='flex flex-col w-[90%] gap-4 lg:w-[40%]'>
           <h4 className='text-3xl font-serif font-semibold'>¡Gracias por ver!</h4>
           <p className='text-[20px]'>Esperamos que estas recetas te resulten útiles y puedas cocinarselas a quien quieras! Porque no hay nada mejor que una rica comida.</p>
       </div>
 
-      <div className="grid grid-cols-2 grid-rows-5 gap-4 h-[60vh] w-[35%]">
+      <div className="grid grid-cols-2 grid-rows-5 gap-4 h-[50vh] w-[90%] lg:w-[40%] lg:h-[60vh]">
         <div className="relative row-span-2">
           <Image src={items[0].image} fill alt={items[0].name} className="object-cover rounded-2xl" loading='eager'/>
         </div>

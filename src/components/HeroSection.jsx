@@ -5,13 +5,13 @@ import Link from "next/link"
 const HeroSection = ()=>{
     return(
 
-        <section className="h-[90vh] flex items-center justify-evenly flex-wrap">
+        <section className="h-fit flex-col items-center justify-evenly flex-wrap w-full mt-8 lg:flex lg:flex-row lg:h-[90vh] lg:mt-0">
 
-            <div className="w-[40%] flex flex-col gap-8 h-fit">
+            <div className="w-[90%] flex flex-col gap-8 h-fit lg:w-[45%]">
 
-                <h1 className="font-serif text-[2.5em]/14">Comer sano es una parte muy importante de tu estilo de vida</h1>
+                <h1 className="font-serif text-[1.8em]/10 lg:text-[2.5em]/14">Comer sano es una parte muy importante de tu estilo de vida</h1>
 
-                <p className="text-2xl">Recetas listas para preparar las comidas más ricas!</p>
+                <p className="text-[20px]">Recetas listas para preparar las comidas más ricas!</p>
 
                 <Link href="/#recipes" className="bg-(--color-acento) py-2 px-5 rounded-2xl w-fit text-(--blanco) flex items-center gap-2">
                     Ver todas las recetas
@@ -20,16 +20,14 @@ const HeroSection = ()=>{
 
             </div>
 
-            <div className="relative w-[45%] flex justify-center">
+            <div className="relative w-full flex justify-center lg:w-[40%]">
 
                 <Image 
-                
                     src='/imgs/hero-image.png'
-                    width={500}
+                    width={350}
                     height={100}
                     alt="recetas ricas y fáciles"
-                    className="z-1"
-                    
+                    className="z-1 lg:w-[80%] lg:translate-x-6"
                 />
                 
                 <div className="absolute flex content-center justify-center top-10 right-20 clip-star bg-(--color-acento2) aspect-square p-4 z-2">
