@@ -22,9 +22,6 @@ const itemsNav = [
     },
 ]
 
-// ver como se hace responsive la img
-// faltan href de items
-
 return(
     <header className="flex justify-between h-[10vh] content-center flex-wrap w-[90%] items-center sticky top-0 bg-(--claro) z-4">
 

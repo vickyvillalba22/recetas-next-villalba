@@ -1,3 +1,12 @@
+*Declaración de uso de IA*
+
+Tareas en las que me ayudó la IA. Usé ChatGPT al principio y después seguí con Claude. 
+
+- Corrección de código escrito por mí. Se lo pasaba y le pedía que me diga qué estaba haciendo mal
+- Explicación de sintaxis y de estructuras de código más generales para yo después aplicarlo en mi app.
+- Me ayudó a armar el procesamiento de los arrays de colores y recetas para armar las categorías. Porque me cuesta bastante imaginarme o que se me ocurra el encadenado de métodos de arrays.
+- Detalles muy específicos de Tailwind que no encontraba en la documentación.
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
@@ -34,3 +43,6 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+
+
